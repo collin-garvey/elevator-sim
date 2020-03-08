@@ -1,0 +1,8 @@
+.Shaft {
+  display: flex;
+  align-items: flex-end;
+  background: #222222;
+  width: calc(80vh / 20);
+  height: 80vh;
+  z-index: 2;
+}

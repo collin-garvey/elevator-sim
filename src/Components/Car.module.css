@@ -1,0 +1,5 @@
+.Car {
+  height: calc(80vh / 20);
+  width: calc(80vh / 20);
+  background: #f2f2f2;
+}
