@@ -32,6 +32,8 @@ const carMachine = Machine<CarContext, CarStateSchema, CarEvent>({
   }
 });
 
-const taco = interpret(carMachine)
+const carService = interpret(carMachine)
   .onTransition(state => console.log(state.value))
   .start();
+
+export default carService;
