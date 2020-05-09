@@ -7,10 +7,10 @@ interface FloorProps {
   number: number;
 }
 
-const Floor: React.FC<FloorProps> = ({ number }) => {
+const Floor: React.SFC<FloorProps> = (props) => {
   return (
     <div className={styles.Floor}>
-      <span>{number}</span>
+      <span>{props.number}</span>
       <Passenger destination={10} uuid="something" />
     </div>
   );

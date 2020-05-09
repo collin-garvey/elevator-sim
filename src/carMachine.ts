@@ -18,22 +18,22 @@ const carMachine = Machine<CarContext, CarStateSchema, CarEvent>({
   key: "car",
   initial: "idle",
   context: {
-    currentFloor: 0
+    currentFloor: 0,
   },
   states: {
     idle: {
       on: {
         ASCEND: "ascend",
-        DESCEND: "descend"
-      }
+        DESCEND: "descend",
+      },
     },
     ascend: { on: { DESCEND: "descend" } },
-    descend: { on: { ASCEND: "ascend", IDLE: "idle" } }
-  }
+    descend: { on: { ASCEND: "ascend", IDLE: "idle" } },
+  },
 });
 
 const carService = interpret(carMachine)
-  .onTransition(state => console.log(state.value))
+  .onTransition((state) => console.log(state.value))
   .start();
 
 export default carService;
